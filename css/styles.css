@@ -147,19 +147,25 @@ img {
 
 .banner {
     background-color: #2e2f42;
-    text-align: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(/goit-markup-hw-04/images/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
     padding: 188px 0;
 
 }
 
 .banner-title {
-    display: inline-block;
     color: #ffffff;
     font-size: 56px;
     font-style: normal;
     line-height: 1.07;
     letter-spacing: 1.12px;
+    text-align: center;
     max-width: 496px;
+    margin: 0 auto 48px;
 }
 
 .banner-button {
@@ -172,7 +178,7 @@ img {
     line-height: 24px;
     letter-spacing: 0.64px;
     cursor: pointer;
-    margin: 48px auto 0;
+    margin: 0 auto;
     padding: 16px 32px;
     border: 0;
     border-radius: 4px;
@@ -338,6 +344,17 @@ img {
     padding: 100px 0;
 }
 
+.footer-wrapper {
+    display: flex;
+    gap: 120px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer-logo-block {
+    flex-shrink: 0;
+}
+
 .footer-logo {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
@@ -363,3 +380,42 @@ img {
     line-height: 1.5;
     letter-spacing: 0.32px;
 }
+
+.social-media-block {}
+
+.social-media-title {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+}
+
+.social-list {
+    display: flex;
+    gap: 16px;
+}
+
+.social-item {}
+
+.icons-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.icon-media {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
