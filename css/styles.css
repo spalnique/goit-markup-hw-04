@@ -547,7 +547,8 @@ img {
 }
 
 .footer-media-list .media-link:hover,
-.footer-media-list .media-link:hover {
+.footer-media-list .media-link:focus,
+.footer-media-list .media-link:active {
     background-color: #31D0AA;
 }
 
