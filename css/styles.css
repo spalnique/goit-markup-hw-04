@@ -2,8 +2,8 @@
 
 
 *,
-::after,
-::before {
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -93,7 +93,6 @@ img {
 
 .nav-block {
     display: flex;
-    padding: 24px 0px;
     align-items: center;
 }
 
@@ -105,17 +104,41 @@ img {
 .nav-item {}
 
 .nav-link {
+    display: block;
+    height: 72px;
     color: #2E2F42;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     padding: 24px 0;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
 .nav-link:focus {
     color: #404BBF;
-    text-decoration: underline;
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    color: #404BBF;
+    opacity: 1;
 }
 
 .address-block {
@@ -134,6 +157,7 @@ img {
     color: #434455;
     line-height: 24px;
     letter-spacing: 0.32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -183,11 +207,14 @@ img {
     border: 0;
     border-radius: 4px;
     min-width: 169px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: transform 200ms ease-in-out, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .banner-button:hover,
 .banner-button:focus {
     background-color: #404BBF;
+    transform: scale(1.025);
 }
 
 
@@ -251,6 +278,10 @@ img {
     display: block;
     background-color: #ffffff;
     border-radius: 0px 0px 4px 4px;
+    box-shadow:
+        0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .staff-card-wrapper {
@@ -307,9 +338,49 @@ img {
 
 .portfolio-item {
     flex-basis: calc((100% - 24px * 2) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-img {}
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow:
+        0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-overlay-container {
+    position: relative;
+    display: block;
+    width: 360px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    display: block;
+    background-color: #4D5AE5;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-overlay-container:hover .portfolio-overlay,
+.portfolio-overlay-container:focus .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.overlay-text {
+    color: #F4F4FD;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+}
 
 .portfolio-item-wrapper {
     padding: 32px 16px;
@@ -381,10 +452,11 @@ img {
     letter-spacing: 0.32px;
 }
 
-.social-media-block {}
+.footer-media-block {
+    flex-shrink: 0;
+}
 
-.social-media-title {
-    display: inline-block;
+.footer-media-title {
     color: #fff;
     font-size: 16px;
     font-style: normal;
@@ -394,28 +466,37 @@ img {
     margin-bottom: 16px;
 }
 
-.social-list {
+.footer-media-list {
     display: flex;
     gap: 16px;
 }
 
-.social-item {}
+.footer-media-list .media-item {}
 
-.icons-container {
-    position: relative;
+.footer-media-list .media-link {
+    /* position: relative;
+    top: 0;
+    left: 0; */
+    display: block;
+    background-color: #404BBF;
+    border-radius: 50%;
     width: 40px;
     height: 40px;
+    padding: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+.footer-media-list .media-link:hover,
+.footer-media-list .media-link:hover {
+    background-color: #31D0AA;
 }
 
-.icon-media {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.footer-media-list .icon-container {
+    /* position: absolute;
+    top: 8px;
+    left: 8px; */
 }
 
+.footer-media-list .icon {
+    fill: #fff;
+}
