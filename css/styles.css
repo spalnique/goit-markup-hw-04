@@ -66,6 +66,10 @@ img {
 
 .header-container {
     border-bottom: 1px solid #E7E9FC;
+    box-shadow:
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header-wrapper {
@@ -106,7 +110,7 @@ img {
 .nav-link {
     display: block;
     height: 72px;
-    color: #2E2F42;
+    color: #404bbf;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -129,7 +133,7 @@ img {
     border-radius: 2px;
     background-color: #404BBF;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     opacity: 0;
     transition: opacity 250ms ease-in-out;
