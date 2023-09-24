@@ -38,15 +38,6 @@ img {
     padding: 120px 0;
 }
 
-.section-title {
-    color: #2E2F42;
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -175,8 +166,8 @@ img {
 
 .banner {
     background-color: #2e2f42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-            rgba(46, 47, 66, 0.7)),
+    background-image:
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(/goit-markup-hw-04/images/banner-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -231,6 +222,16 @@ img {
 
 .features {
     background-color: #ffffff;
+}
+
+.features-title {
+    color: #2E2F42;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 .features-list {
@@ -288,6 +289,12 @@ img {
 }
 
 .staff-title {
+    color: #2E2F42;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
     margin-bottom: 72px;
 }
 
@@ -347,9 +354,7 @@ img {
 .staff-media-list .media-item {}
 
 .staff-media-list .media-link {
-    /* position: relative;
-    top: 0;
-    left: 0; */
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -533,9 +538,7 @@ img {
 }
 
 .footer-media-list .media-link {
-    /* position: relative;
-    top: 0;
-    left: 0; */
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
